@@ -1,0 +1,32 @@
+{
+  "name": "soundsteps-child-development-centre",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SOUNDSTEPS Child Development Centre — Modern, accessible web platform",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/verify-stage2-design-system.mjs"
+  },
+  "dependencies": {
+    "framer-motion": "^12.42.0",
+    "lucide-react": "^1.71.0",
+    "next": "^16.4.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^16.4.6",
+    "@tailwindcss/turbopack": "^4.3.3",
+    "@types/node": "^20.17.24",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.21.0",
+    "eslint-config-next": "^16.4.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.8.2"
+  }
+}

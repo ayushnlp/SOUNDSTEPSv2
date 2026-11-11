@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  /* ==========================================================================
+     SOUNDSTEPS BRAND COLOUR PALETTE (MASTER ARCHITECTURE)
+     ========================================================================== */
+  --color-deep-teal: #183C3B;
+  --color-warm-ivory: #F6F3EC;
+  --color-muted-terracotta: #C77C62;
+  --color-pure-white: #FFFFFF;
+  --color-dark-text: #243332;
+
+  /* Supporting Accessible Neutrals (WCAG 2.2 AA Contrast Hierarchy) */
+  --color-deep-teal-hover: #122E2D;
+  --color-deep-teal-subtle: #E8EEED;
+  --color-terracotta-hover: #B26950;
+  --color-terracotta-subtle: #F9EFEB;
+  --color-dark-text-muted: #52605E;
+  --color-warm-stone: #EAE6DC;
+  --color-warm-border: #DCD6CA;
+
+  /* ==========================================================================
+     SEMANTIC TOKENS
+     ========================================================================== */
+  --color-background: #F6F3EC;
+  --color-foreground: #243332;
+  --color-primary: #183C3B;
+  --color-primary-foreground: #F6F3EC;
+  --color-secondary: #FFFFFF;
+  --color-secondary-foreground: #243332;
+  --color-accent: #C77C62;
+  --color-accent-foreground: #FFFFFF;
+  --color-muted: #EAE6DC;
+  --color-muted-foreground: #52605E;
+  --color-border: #DCD6CA;
+  --color-surface: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-focus-ring: #183C3B;
+
+  /* ==========================================================================
+     TYPOGRAPHY TOKENS: FRAUNCES (DISPLAY) & PLUS JAKARTA SANS (BODY)
+     ========================================================================== */
+  --font-display: var(--font-fraunces), Georgia, Cambria, serif;
+  --font-body: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* ==========================================================================
+     SPACING SCALE TOKENS (4px BASE SCALE)
+     ========================================================================== */
+  --spacing-1: 0.25rem;  /* 4px */
+  --spacing-2: 0.5rem;   /* 8px */
+  --spacing-3: 0.75rem;  /* 12px */
+  --spacing-4: 1rem;     /* 16px */
+  --spacing-6: 1.5rem;   /* 24px */
+  --spacing-8: 2rem;     /* 32px */
+  --spacing-12: 3rem;    /* 48px */
+  --spacing-16: 4rem;    /* 64px */
+  --spacing-20: 5rem;    /* 80px */
+  --spacing-24: 6rem;    /* 96px */
+}
+
+/* ==========================================================================
+   ROOT VARIABLE INJECTION & BASE STYLES
+   ========================================================================== */
+:root {
+  --background: #F6F3EC;
+  --foreground: #243332;
+  --primary: #183C3B;
+  --primary-foreground: #F6F3EC;
+  --secondary: #FFFFFF;
+  --secondary-foreground: #243332;
+  --accent: #C77C62;
+  --accent-foreground: #FFFFFF;
+  --muted: #EAE6DC;
+  --muted-foreground: #52605E;
+  --border: #DCD6CA;
+  --surface: #FFFFFF;
+  --card: #FFFFFF;
+  --focus-ring: #183C3B;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY UTILITIES
+   ========================================================================== */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Editorial Heading Classes */
+.heading-hero {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-deep-teal);
+}
+
+.heading-1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--color-deep-teal);
+}
+
+.heading-2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--color-deep-teal);
+}
+
+.heading-3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.3;
+  color: var(--color-deep-teal);
+}
+
+.heading-4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: var(--color-deep-teal);
+}
+
+.eyebrow-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted-terracotta);
+}
+
+.body-large {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-dark-text);
+}
+
+.body-regular {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-dark-text);
+}
+
+.body-small {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-dark-text-muted);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--color-dark-text-muted);
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & REDUCED MOTION (WCAG 2.2 AA)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
